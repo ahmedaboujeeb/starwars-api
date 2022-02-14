@@ -1,10 +1,19 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import Character from './Character'
 
 
 function App() {
   return (
     <div>
-      <h1>Starwars Characters</h1>
+      <Router>
+        <Container>
+          <Routes>
+          <Route path="/" element={<Character />} />
+          </Routes>
+        </Container>
+      </Router>
     </div>
   );
 }
